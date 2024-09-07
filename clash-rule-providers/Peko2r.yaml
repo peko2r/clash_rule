@@ -1,0 +1,1049 @@
+port: 7890 # http(s) 代理端口
+socks-port: 7891 # socks4/4a/5 代理端口
+redir-port: 7892 # 透明代理端口，仅能代理 TCP 流量
+mixed-port: 7893 # 混合代理端口 http(s)+socks # 高优先级
+mode: rule # 运行模式
+unified-delay: true # 统一延迟 # 更换延迟计算方式,去除握手等额外延迟
+tcp-concurrent: true # TCP并发
+find-process-mode: strict
+geodata-mode: true        #使用geoip.dat数据库(默认：false使用mmdb数据库)
+geodata-loader: standard # GEO文件加载模式
+# 自定 GEO 下载地址
+geox-url:
+  geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+log-level: info # 日志级别
+profile:
+  tracing: true
+  store-selected: true
+  store-fake-ip: true
+tun:
+  enable: true
+  dns-hijack:
+    - 'any:53'
+  auto-route: true
+  auto-detect-interface: true
+sniffer:                         #【Meta专属】sniffer域名嗅探器
+  enable: true                   #嗅探开关
+  parse-pure-ip: true
+  sniff:
+    TLS:
+      ports: [443, 8443]
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    QUIC:
+      ports: [443, 8443]
+
+dns:
+  enable: true
+  listen: 127.0.0.1:8853
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
+    - https://194.242.2.2/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://1.1.1.1/dns-query
+    - https://208.67.222.222/dns-query
+  fallback:                          #回落DNS服务器，支持udp/tcp/dot/doh/doq
+    - https://194.242.2.3/dns-query
+    - https://1.0.0.1/dns-query
+    - https://208.67.220.220/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    nameserver-policy:
+      geosite:cn: system
+      geosite:gfw,geolocation-!cn:
+        - quic://223.5.5.5
+        - quic://223.6.6.6
+        - https://1.12.12.12/dns-query
+        - https://120.53.53.53/dns-query
+    domain:
+      - +.facebook.com
+      - +.twitter.com
+      - +.google.com
+      - +.googleapis.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.xn--ngstr-lra8j.com
+      - +.googlevideo.com
+      - +.gvt1.com
+      - +.gmail.com
+      - +.youtube.com
+      - +.youtu.be
+      - +.gvt0.com
+      - +.gvt2.com
+      - +.gvt3.com
+      - +.gstatic.com
+      - +.265.com
+      - +.2mdn.net
+      - +.app-measurement.com
+      - +.c.admob.com
+      - +.clickserve.dartsearch.net
+      - +.crl.pki.goog
+      - +.doubleclick.net
+      - +.firebase-settings.crashlytics.com
+      - +.google-analytics.com
+      - +.googleadservices.com
+      - +.googleanalytics.com
+      - +.googleoptimize.com
+      - +.googlesyndication.com
+      - +.googletagmanager.com
+      - +.googletagservices.com
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.ipv6.microsoft.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.ff14.sdo.com"
+    - ff.dorado.sdo.com
+    - "*.mcdn.bilivideo.cn"
+    - +.media.dssott.com
+    - +.pvp.net
+
+
+proxies:
+  
+proxy-groups:
+  - name: 🚀 Proxy
+    type: select
+    proxies:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇨🇳 TW
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇪🇺 EU
+      - 🇰🇷 KR
+      - 🇸🇬 SG IEPL
+      - 🇯🇵 JP IEPL
+      - 🇨🇳 TW IEPL
+      - 🇭🇰 HK IEPL
+      - 🇺🇸 US IEPL
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🎙️Stream
+    type: select
+    proxies:
+      - ⛄Stream
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇨🇳 TW
+      - 🇺🇸 US
+      - 🇪🇺 EU
+      - 🇰🇷 KR
+      - 🇸🇬 SG IEPL
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 📲 Telegram
+    type: select
+    proxies:
+      - 🇸🇬 SG
+      - 🇸🇬 SG IEPL
+      - 🇭🇰 HK
+      - 🇨🇳 TW
+      - 🇯🇵 JP
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🎬 Emby
+    type: select
+    proxies:
+      - 🫧Emby专用
+      - DIRECT
+      - 🎙️Stream
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇭🇰 HK
+      - 🇨🇳 TW
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🎮 Game
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - DIRECT
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🎵 Spotify
+    type: select
+    proxies:
+      - DIRECT
+      - 🇺🇸 US
+      - 🚀 Proxy
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🧚 Google
+    type: select
+    proxies:
+      - 🇭🇰 HK
+      - 🇺🇸 US IEPL
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇨🇳 TW
+      - 🇯🇵 JP
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 📹 YouTube
+    type: select
+    proxies:
+      - 🎙️Stream
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🔥 E-h
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🇺🇸 US 家宽
+      - 🇨🇳 TW IEPL
+      - 🇭🇰 HK IEPL
+      - 🇯🇵 JP IEPL
+      - 🇸🇬 SG IEPL
+      - 🇺🇸 US IEPL
+      - DIRECT
+
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 🎙️Stream
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 📼 Twitch
+    type: select
+    proxies:
+      - 🎙️Stream
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🐹 Disney
+    type: select
+    proxies:
+      - 🎙️Stream
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 💬 Discord
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🌌 Nintendo
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🌍 Globalmedia
+    type: select
+    proxies:
+      - 🎙️Stream
+      - 🇸🇬 SG
+      - 🇭🇰 HK IEPL
+      - 🇭🇰 HK
+      - 🇨🇳 TW
+      - 🇯🇵 JP
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+      - DIRECT
+
+  - name: 🤖 AI
+    type: select
+    proxies:
+      - 🇺🇸 US
+      - 🚀 Proxy
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: Ⓜ️ Bing
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: Ⓜ️ Microsoft
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🇸🇬 SG
+      - 🇭🇰 HK IEPL
+      - 🇭🇰 HK
+      - 🇨🇳 TW
+      - 🇯🇵 JP
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 📺 Bilibili
+    type: select
+    proxies:
+      - DIRECT
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇨🇳 TW IEPL
+      - 🇭🇰 HK IEPL
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🍎 Apple
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 Proxy
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: ♻️ select1
+    type: select
+    use:
+      - PEKO1
+      - PEKO2
+      - PEKO3
+      - PEKO4
+      
+  - name: ♻️ select2
+    type: select
+    use:
+      - PEKO1
+      - PEKO2
+      - PEKO3
+      - PEKO4
+
+  - name: 📺 Bahamut
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: Ⓜ️ OneDrive
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🇸🇬 SG
+      - 🇭🇰 HK IEPL
+      - 🇭🇰 HK
+      - 🇨🇳 TW
+      - 🇯🇵 JP
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🍎 AppleTV
+    type: select
+    proxies:
+      - 🚀 Proxy
+      - 🇨🇳 TW
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇸 US
+      - 🇰🇷 KR
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: 🌏 CNmedia
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 HK IEPL
+      - 🇭🇰 HK
+      - 🇨🇳 TW
+      - 🇸🇬 SG
+      - 🇯🇵 JP
+      - ♻️ select1
+      - ♻️ select2
+
+  - name: Direct
+    type: select
+    proxies:
+      - DIRECT
+      - 🎙️Stream
+
+  - name: 🚫 AD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: ⛄Stream
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO4
+    filter: 
+
+  - name: 🫧Emby专用
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO4
+    filter: "香港|美国"
+
+  - name: 🇭🇰 HK
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO2
+      - PEKO3
+    filter: "香港0|Hong Kong 0|香港"
+
+  - name: 🇸🇬 SG
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO2
+    filter: "新加坡|Singapore 01|Singapore 02|Singapore 03|Singapore 04|Singapore 05|Singapore 06"
+
+  - name: 🇯🇵 JP
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO2
+      - PEKO3
+    filter: "日用|日本0|日本|Japan"
+
+  - name: 🇨🇳 TW
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO3
+      - PEKO2
+    filter: "台湾|Taiwan 0"
+
+  - name: 🇺🇸 US
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO3
+      - PEKO2
+    filter: "美国|United States 0"
+
+  - name: 🇪🇺 EU
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO2
+      - PEKO3
+    filter: "荷兰|德国"
+
+  - name: 🇰🇷 KR
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO3
+    filter: "韩国"
+
+  - name: 🇺🇸 US 家宽
+    type: select
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    use:
+      - PEKO2
+    filter: "🇺🇸 United States [|] 家宽 3.0x"
+
+  - name: 🇭🇰 HK IEPL
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    lazy: true
+    use:
+      - PEKO1
+    filter: "深港|Hong Kong 🇭🇰 IPLC|HKBN"
+
+  - name: 🇸🇬 SG IEPL
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    lazy: true
+    use:
+      - PEKO1
+    filter: "Singapore 🇸🇬 IPLC"
+
+  - name: 🇯🇵 JP IEPL
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    lazy: true
+    use:
+      - PEKO1
+    filter: "Japan 🇯🇵 沪日IPLC"
+
+  - name: 🇨🇳 TW IEPL
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    lazy: true
+    use:
+      - PEKO1
+    filter: "Taiwan 🇹🇼 IPLC"
+
+  - name: 🇺🇸 US IEPL
+    type: fallback
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 3600
+    lazy: true
+    use:
+      - PEKO1
+    filter: "United States 🇺🇸 沪日IPLC|United States 🇺🇸 ATT"
+
+
+
+proxy-providers:
+  PEKO1:
+    type: http
+    url: https://url.ayanami-subscribe-url.online/api/v1/client/subscribe?token=6c2116661a8ec679c109fd7e668cb3ee&flag=clash
+    interval: 3600
+    path:
+
+  PEKO2:
+    type: http
+    url: https://api.acaisbest.online/api/v1/client/subscribe?token=5bf2236e85a5fdac4e61dc643298c6f6
+    interval: 3600
+    path:
+
+  PEKO3:
+    type: http
+    url: https://service-a4rgovvz-202402.lycoris.asia/api/v1/client/subscribe?token=2045755de9af1981b422cf1aa8af2130
+    interval: 3600
+    path:
+
+  PEKO4:
+    type: http
+    url: https://cdn1724328266.kunlun-c3r0j7sv-ppg.xyz/api/v1/client/subscribe?token=5f7717ae808217d75886c3bcd61c9c27
+    interval: 3600
+    path:
+
+
+rule-providers:
+  Myself:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/myself.yaml"
+    path: 
+    interval: 86400
+
+  AWAvenue:
+    type: http
+    behavior: domain
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
+    path: 
+    interval: 86400
+
+  UnBan:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
+    path: 
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    path: 
+    interval: 86400
+
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
+    path: 
+    interval: 86400
+
+  SteamCN:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml"
+    path: 
+    interval: 86400
+
+  GameDownloadCN:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml"
+    path: 
+    interval: 86400
+
+  Emby:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/Emby.yaml"
+    path: 
+    interval: 86400
+
+  E-h:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/E-h.yaml"
+    path: 
+    interval: 86400
+
+  Bing:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml"
+    path: 
+    interval: 86400
+
+  OneDrive:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml"
+    path: 
+    interval: 86400  
+    
+  AppleTV:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AppleTV/AppleTV.yaml"
+    path: 
+    interval: 86400
+
+  Telegram SG:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/TelegramSG.yaml"
+    path: 
+    interval: 86400
+
+  Telegram EU:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/TelegramEU.yaml"
+    path: 
+    interval: 86400
+
+  Telegram US:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/TelegramUS.yaml"
+    path: 
+    interval: 86400
+
+  Telegram:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    path:
+    interval: 86400
+
+  Discord:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Discord/Discord.yaml"
+    path: 
+    interval: 86400
+
+  OpenAi:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml"
+    path: 
+    interval: 86400
+    
+  AI:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/AI.yaml"
+    path: 
+    interval: 86400
+
+  Game:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml"
+    path: 
+    interval: 86400
+
+  Twitch:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitch/Twitch.yaml"
+    path: 
+    interval: 86400
+
+  YouTube:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml"
+    path: 
+    interval: 86400
+    
+  Netflix:
+    behavior: classical
+    type: http
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml"
+    path:
+    interval: 86400 
+
+  Disney:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney.yaml"
+    path:
+    interval: 86400
+
+  Bahamut:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml"
+    path:
+    interval: 86400
+
+  Apple:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml"
+    path:
+    interval: 86400
+
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml"
+    path:
+    interval: 86400
+
+  Google:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml"
+    path:
+    interval: 86400
+
+  BilibiliHMT:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
+    path:
+    interval: 86400
+
+  Bilibili:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
+    path:
+    interval: 86400
+
+  Spotify:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml"
+    path:
+    interval: 86400
+
+  CNmedia:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia.yaml"
+    path:
+    interval: 86400
+
+  Globalmedia:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia.yaml"
+    path:
+    interval: 86400
+
+  Nintendo:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Nintendo/Nintendo.yaml"
+    path:
+    interval: 86400
+
+  Proxy:
+    type: http
+    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml"
+    path:
+    interval: 86400
+
+  Direct:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/Direct.yaml"
+    path:
+    interval: 86400
+    
+  US:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/US.yaml"
+    path:
+    interval: 86400
+    
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml"
+    path:
+    interval: 86400
+
+  Download:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Download.yaml"
+    path:
+    interval: 86400
+
+  ChinaCompanyIp:
+    type: http
+    behavior: ipcidr
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml"
+    path:
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    path:
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path:
+    interval: 86400
+
+
+rules:
+ - RULE-SET,E-h,🔥 E-h
+ - RULE-SET,Myself,🚀 Proxy
+ - RULE-SET,UnBan,DIRECT
+ - DOMAIN,clash.razord.top,DIRECT
+ - DOMAIN,yacd.haishan.me,DIRECT
+ - RULE-SET,private,DIRECT
+ - RULE-SET,SteamCN,DIRECT
+ - RULE-SET,GameDownloadCN,DIRECT
+ - RULE-SET,LocalAreaNetwork,DIRECT
+ - RULE-SET,Direct,DIRECT
+ - RULE-SET,US,🇺🇸 US
+ - RULE-SET,Emby,🎬 Emby
+ - RULE-SET,AWAvenue,🚫 AD
+ - RULE-SET,Game,🎮 Game
+ - RULE-SET,Bing,Ⓜ️ Bing
+ - RULE-SET,AppleTV,🍎 AppleTV
+ - RULE-SET,Telegram,📲 Telegram
+ - RULE-SET,Discord,💬 Discord
+ - RULE-SET,OpenAi,🤖 AI
+ - RULE-SET,AI,🤖 AI
+ - RULE-SET,Twitch,📼 Twitch
+ - RULE-SET,YouTube,📹 YouTube
+ - RULE-SET,Netflix,🎥 Netflix
+ - RULE-SET,Disney,🐹 Disney
+ - RULE-SET,Bahamut,📺 Bahamut
+ - RULE-SET,Apple,🍎 Apple
+ - RULE-SET,Microsoft,Ⓜ️ Microsoft
+ - RULE-SET,Google,🧚 Google
+ - RULE-SET,BilibiliHMT,📺 Bilibili
+ - RULE-SET,Bilibili,📺 Bilibili
+ - RULE-SET,Spotify,🎵 Spotify
+ - RULE-SET,CNmedia,🌏 CNmedia
+ - RULE-SET,Globalmedia,🌍 Globalmedia
+ - RULE-SET,Nintendo,🌌 Nintendo
+ - RULE-SET,Proxy,🚀 Proxy
+ - RULE-SET,lancidr,DIRECT
+ - RULE-SET,cncidr,DIRECT
+ - RULE-SET,ChinaDomain,DIRECT
+ - RULE-SET,Download,DIRECT
+ - RULE-SET,ChinaCompanyIp,DIRECT
+ - GEOIP,LAN,DIRECT
+ - GEOIP,CN,DIRECT
+ - MATCH,🚀 Proxy
