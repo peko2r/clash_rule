@@ -1,1 +1,2 @@
-PROCESS-NAME,ForzaHorizon4.exe
+payload:
+    PROCESS-NAME,ForzaHorizon4.exe
