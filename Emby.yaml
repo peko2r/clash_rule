@@ -26,6 +26,7 @@ payload:
   - DOMAIN,gd.9521732.xyz
   - DOMAIN,hyonix.embyplus.org
   - IP-CIDR,89.58.18.111/32
+  - DOMAIN,emby3.029902.xyz
 #不给看
   - DOMAIN,t.emby.pro
   - DOMAIN,drei.bgka.me
