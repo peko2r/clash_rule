@@ -1,53 +1,39 @@
 payload:
 #Emby进程
   - PROCESS-NAME,electron.exe
-#Heisi
-  - DOMAIN,i109.com
-  - DOMAIN,heisi.nekobox.best
-  - DOMAIN,h1.i109.com
-  - DOMAIN,h2.i109.com
-#misty代理
+#misty
   - DOMAIN,misty.cx
-#卡戎代理
-  - DOMAIN,docs.charontv.com
-#hxd主线路代理
+#卡戎
+  - DOMAIN,play.charontv.com
+#hxd
   - DOMAIN,hxd.as174.com
   - DOMAIN,cf.bili.rip
   - DOMAIN,emby.as174.com
-#NyaMedia代理线路代理
+#NyaMedia
   - DOMAIN,emby.bangumi.ca
   - IP-CIDR,103.177.137.228/32
-#POLO主线路代理
-  - DOMAIN,sf.poloemby.xyz
-  - DOMAIN,scf.poloemby.xyz
-#mjj新加坡线路代理
-  - DOMAIN,direct.mjjemby.org
-  - DOMAIN,sg01.mjjemby.org
-  - DOMAIN,cf.mjjemby.org
-  - DOMAIN,kr.mjjemby.org:443
-  - DOMAIN,jp01.mjjemby.org
-  - DOMAIN,jp02.mjjemby.org
-#loser电信直连
-  - DOMAIN,ushd.xmsl.org
+#loser
   - DOMAIN,cf.gtlx.org
   - IP-CIDR,104.194.8.196/32
-#放映厅直连
+#放映厅
   - DOMAIN,emby.9191001.xyz
-#peach主线路直连
-  - DOMAIN,embymv.tk
+#peach
+  - DOMAIN,embymv.link
   - IP-CIDR,193.123.232.141/32
   - IP-CIDR,168.138.45.100/32
-#纸片人直连
+#纸片人
   - DOMAIN,embyplus.org
   - DOMAIN,gd.9521732.xyz
   - DOMAIN,hyonix.embyplus.org
   - IP-CIDR,89.58.18.111/32
-#不给看直连
+#不给看
   - DOMAIN,t.emby.pro
   - DOMAIN,drei.bgka.me
   - DOMAIN,s3.bgka.me
-#jms直连
+#jms
+  - DOMAIN,cf1.jmsuper.com
   - DOMAIN,cf2.jmsooo.com
+  - DOMAIN,cf2.jmsuper.com
 #star-cat
   - DOMAIN,flare.catlinks.co.uk
   - DOMAIN,xxx.887711.xyz
@@ -59,19 +45,24 @@ payload:
   - DOMAIN,cdsalw2lw.catlinks.co.uk
 #cc公益
   - DOMAIN,cc.coemn.com
+  - DOMAIN,cc.embycc.link
   - IP-CIDR,193.123.252.106/32
 #终点站
   - DOMAIN,pub1.emby.wtf
+  - DOMAIN,pub1cf.emby.wtf
+  - DOMAIN,pub1.term.wtf
   - DOMAIN,pub2.emby.wtf
+  - DOMAIN,pub2cf.emby.wtf
+  - DOMAIN,pub2.term.wtf
   - DOMAIN,pub3.emby.wtf
+  - DOMAIN,pub3cf.emby.wtf
+  - DOMAIN,pub3.term.wtf
 #PornEmby
   - DOMAIN,pornemby.com
 #Infinity
   - DOMAIN,vx.infinityfly.top
 #Pilipili
-  - DOMAIN,stream_pilipili.misakaf.org
-  - DOMAIN,emby.pilipiliultra.top
-  - DOMAIN,emby.pilipiliultra.com:443
+  - DOMAIN,pilipili.club
   - DOMAIN,manga.pilipiliultra.com
 #特卡
   - DOMAIN,emby.carlos.trade
@@ -81,12 +72,3 @@ payload:
   - DOMAIN,emby.carlos.trade
 #Lyrebird
   - DOMAIN,cdn.lyrebirdemby.com
-#江湖
-  - DOMAIN,film.reddust.link
-  - DOMAIN,jh.reddust.link
-  - IP-CIDR,146.56.179.83/32
-#搬服
-  - DOMAIN,kr.955557.xyz
-  - DOMAIN,kr2.955557.xyz
-  - DOMAIN,cfbyg.955557.xyz
-  - DOMAIN,us.955557.xyz
