@@ -1,6 +1,8 @@
 payload:
 #Emby进程
   - PROCESS-NAME,electron.exe
+#Plumber
+  - DOMAIN,emby.tiancheng.cf
 #misty
   - DOMAIN,misty.cx
 #卡戎
