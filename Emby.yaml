@@ -2,7 +2,7 @@ payload:
 #Emby进程
   - PROCESS-NAME,electron.exe
 #Plumber
-  - DOMAIN,emby.tiancheng.cf
+  - DOMAIN,tiancheng.boaz.cf
 #misty
   - DOMAIN,misty.cx
 #卡戎
