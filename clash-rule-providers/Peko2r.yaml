@@ -555,7 +555,7 @@ proxy-groups:
     interval: 3600
     use:
       - PEKO4
-    filter: 
+    filter: "日本|美国"
 
   - name: 🫧Emby专用
     type: url-test
