@@ -1,6 +1,8 @@
 payload:
 #Emby进程
   - PROCESS-NAME,electron.exe
+#冰镇西瓜
+  - DOMAIN,emby.1024.name
 #Plumber
   - DOMAIN,tiancheng.boaz.cf
 #misty
