@@ -68,6 +68,7 @@ payload:
   - DOMAIN,vx.infinityfly.top
 #Pilipili
   - DOMAIN,pilipili.club
+  - DOMAIN,css.pilipili.club:443
   - DOMAIN,manga.pilipiliultra.com
 #特卡
   - DOMAIN,emby.carlos.trade
