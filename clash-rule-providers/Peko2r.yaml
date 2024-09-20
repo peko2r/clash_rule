@@ -690,7 +690,7 @@ proxy-providers:
 
   PEKO2:
     type: http
-    url: https://api.acaisbest.online/api/v1/client/subscribe?token=5bf2236e85a5fdac4e61dc643298c6f6
+    url: https://dadada.acaisbest.com/api/v1/client/subscribe?token=7e1c57b00e80523df239072c3d96677f
     interval: 3600
     path:
 
