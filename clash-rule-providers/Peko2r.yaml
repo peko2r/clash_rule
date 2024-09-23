@@ -684,7 +684,7 @@ proxy-groups:
 proxy-providers:
   PEKO1:
     type: http
-    url: https://url.ayanami-subscribe-url.online/api/v1/client/subscribe?token=6c2116661a8ec679c109fd7e668cb3ee&flag=clash
+    url: https://url.ayanami-subscribe-url.online/api/v1/client/subscribe?token=6c2116661a8ec679c109fd7e668cb3ee
     interval: 3600
     path:
 
