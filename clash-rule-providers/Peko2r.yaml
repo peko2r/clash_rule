@@ -408,6 +408,10 @@ proxy-groups:
     type: select
     proxies:
       - 🇺🇸 US
+      - 🇭🇰 HK IEPL
+      - 🇯🇵 JP IEPL
+      - 🇸🇬 SG IEPL
+      - 🇺🇸 US IEPL
       - 🚀 Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
