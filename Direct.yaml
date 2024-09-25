@@ -16,3 +16,4 @@ payload:
   - PROCESS-NAME,VALORANT.exe
   - PROCESS-NAME,无畏契约登录器.exe
   - PROCESS-NAME,CrossProxy.exe
+  - PROCESS-NAME,UnrealCEFSubProcess.exe
