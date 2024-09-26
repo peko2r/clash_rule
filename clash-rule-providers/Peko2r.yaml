@@ -38,161 +38,33 @@ sniffer:                         #【Meta专属】sniffer域名嗅探器
 
 dns:
   enable: true
+  prefer-h3: true
   listen: 127.0.0.1:8853
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - +.lan
+    - +.local
+    - time.*.com
+    - ntp.*.com
+    - +.market.xiaomi.com
+
+
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
   nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://194.242.2.2/dns-query
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-    - https://1.1.1.1/dns-query
-    - https://208.67.222.222/dns-query
-  fallback:                          #回落DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://194.242.2.3/dns-query
-    - https://1.0.0.1/dns-query
-    - https://208.67.220.220/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    nameserver-policy:
-      geosite:cn: system
-      geosite:gfw,geolocation-!cn:
-        - quic://223.5.5.5
-        - quic://223.6.6.6
-        - https://1.12.12.12/dns-query
-        - https://120.53.53.53/dns-query
-    domain:
-      - +.facebook.com
-      - +.twitter.com
-      - +.google.com
-      - +.googleapis.com
-      - +.google.cn
-      - +.googleapis.cn
-      - +.xn--ngstr-lra8j.com
-      - +.googlevideo.com
-      - +.gvt1.com
-      - +.gmail.com
-      - +.youtube.com
-      - +.youtu.be
-      - +.gvt0.com
-      - +.gvt2.com
-      - +.gvt3.com
-      - +.gstatic.com
-      - +.265.com
-      - +.2mdn.net
-      - +.app-measurement.com
-      - +.c.admob.com
-      - +.clickserve.dartsearch.net
-      - +.crl.pki.goog
-      - +.doubleclick.net
-      - +.firebase-settings.crashlytics.com
-      - +.google-analytics.com
-      - +.googleadservices.com
-      - +.googleanalytics.com
-      - +.googleoptimize.com
-      - +.googlesyndication.com
-      - +.googletagmanager.com
-      - +.googletagservices.com
-  fake-ip-filter:
-    - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - "*.time.edu.cn"
-    - "*.ntp.org.cn"
-    - +.pool.ntp.org
-    - time1.cloud.tencent.com
-    - music.163.com
-    - "*.music.163.com"
-    - "*.126.net"
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - "*.kuwo.cn"
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - joox.com
-    - y.qq.com
-    - "*.y.qq.com"
-    - streamoc.music.tc.qq.com
-    - mobileoc.music.tc.qq.com
-    - isure.stream.qqmusic.qq.com
-    - dl.stream.qqmusic.qq.com
-    - aqqmusic.tc.qq.com
-    - amobile.music.tc.qq.com
-    - "*.xiami.com"
-    - "*.music.migu.cn"
-    - music.migu.cn
-    - +.msftconnecttest.com
-    - +.msftncsi.com
-    - msftconnecttest.com
-    - msftncsi.com
-    - localhost.ptlogin2.qq.com
-    - localhost.sec.qq.com
-    - +.srv.nintendo.net
-    - +.stun.playstation.net
-    - xbox.*.microsoft.com
-    - xnotify.xboxlive.com
-    - +.ipv6.microsoft.com
-    - +.battlenet.com.cn
-    - +.wotgame.cn
-    - +.wggames.cn
-    - +.wowsgame.cn
-    - +.wargaming.net
-    - proxy.golang.org
-    - stun.*.*
-    - stun.*.*.*
-    - +.stun.*.*
-    - +.stun.*.*.*
-    - +.stun.*.*.*.*
-    - heartbeat.belkin.com
-    - "*.linksys.com"
-    - "*.linksyssmartwifi.com"
-    - "*.router.asus.com"
-    - mesu.apple.com
-    - swscan.apple.com
-    - swquery.apple.com
-    - swdownload.apple.com
-    - swcdn.apple.com
-    - swdist.apple.com
-    - lens.l.google.com
-    - stun.l.google.com
-    - "*.square-enix.com"
-    - "*.finalfantasyxiv.com"
-    - "*.ffxiv.com"
-    - "*.ff14.sdo.com"
-    - ff.dorado.sdo.com
-    - "*.mcdn.bilivideo.cn"
-    - +.media.dssott.com
-    - +.pvp.net
+  geoip: true
+  geoip-code: CN
+  proxy-server-nameserver:
+  nameserver-policy:
+    geosite:cn: system
+    geosite:gfw,geolocation-!cn:
+    - https://223.5.5.5/dns-query#h3=true
+    - https://223.6.6.6/dns-query#h3=true
 
 
 proxies:
@@ -230,7 +102,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
 
-  - name: 📲 Telegram
+  - name: ➤ Telegram
     type: select
     proxies:
       - 🇸🇬 SG
@@ -272,7 +144,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
 
-  - name: 🎵 Spotify
+  - name: ᯤ Spotify
     type: select
     proxies:
       - DIRECT
@@ -299,7 +171,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
 
-  - name: 📹 YouTube
+  - name: ▶️ YouTube
     type: select
     proxies:
       - 🎙️Stream
@@ -312,7 +184,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
 
-  - name: 🔥 E-h
+  - name: 🖤 E-h
     type: select
     proxies:
       - 🚀 Proxy
@@ -324,7 +196,7 @@ proxy-groups:
       - 🇺🇸 US IEPL
       - DIRECT
 
-  - name: 🎥 Netflix
+  - name: 🅽 Netflix
     type: select
     proxies:
       - 🎙️Stream
@@ -337,7 +209,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
 
-  - name: 📼 Twitch
+  - name: 👾 Twitch
     type: select
     proxies:
       - 🎙️Stream
@@ -350,7 +222,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
 
-  - name: 🐹 Disney
+  - name: 🏰 Disney
     type: select
     proxies:
       - 🎙️Stream
@@ -389,7 +261,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
 
-  - name: 🌍 Globalmedia
+  - name: 🎥 Globalmedia
     type: select
     proxies:
       - 🎙️Stream
@@ -404,7 +276,7 @@ proxy-groups:
       - ♻️ select2
       - DIRECT
 
-  - name: 🤖 AI
+  - name: ֎ AI
     type: select
     proxies:
       - 🇺🇸 US
@@ -529,7 +401,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
 
-  - name: 🌏 CNmedia
+  - name: 🎥 CNmedia
     type: select
     proxies:
       - DIRECT
@@ -1008,7 +880,7 @@ rule-providers:
 
 
 rules:
- - RULE-SET,E-h,🔥 E-h
+ - RULE-SET,E-h,🖤 E-h
  - RULE-SET,Myself,🚀 Proxy
  - RULE-SET,UnBan,DIRECT
  - DOMAIN,clash.razord.top,DIRECT
@@ -1024,23 +896,23 @@ rules:
  - RULE-SET,Game,🎮 Game
  - RULE-SET,Bing,Ⓜ️ Bing
  - RULE-SET,AppleTV,🍎 AppleTV
- - RULE-SET,Telegram,📲 Telegram
+ - RULE-SET,Telegram,➤ Telegram
  - RULE-SET,Discord,💬 Discord
- - RULE-SET,OpenAi,🤖 AI
- - RULE-SET,AI,🤖 AI
- - RULE-SET,Twitch,📼 Twitch
- - RULE-SET,YouTube,📹 YouTube
- - RULE-SET,Netflix,🎥 Netflix
- - RULE-SET,Disney,🐹 Disney
+ - RULE-SET,OpenAi,֎ AI
+ - RULE-SET,AI,֎ AI
+ - RULE-SET,Twitch,👾 Twitch
+ - RULE-SET,YouTube,▶️ YouTube
+ - RULE-SET,Netflix,🅽 Netflix
+ - RULE-SET,Disney,🏰 Disney
  - RULE-SET,Bahamut,📺 Bahamut
  - RULE-SET,Apple,🍎 Apple
  - RULE-SET,Microsoft,Ⓜ️ Microsoft
  - RULE-SET,Google,🧚 Google
  - RULE-SET,BilibiliHMT,📺 Bilibili
  - RULE-SET,Bilibili,📺 Bilibili
- - RULE-SET,Spotify,🎵 Spotify
- - RULE-SET,CNmedia,🌏 CNmedia
- - RULE-SET,Globalmedia,🌍 Globalmedia
+ - RULE-SET,Spotify,ᯤ Spotify
+ - RULE-SET,CNmedia,🎥 CNmedia
+ - RULE-SET,Globalmedia,🎥 Globalmedia
  - RULE-SET,Nintendo,🌌 Nintendo
  - RULE-SET,Proxy,🚀 Proxy
  - RULE-SET,lancidr,DIRECT
