@@ -43,28 +43,35 @@ dns:
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: whitelist
   fake-ip-filter:
-    - +.lan
-    - +.local
-    - time.*.com
-    - ntp.*.com
-    - +.market.xiaomi.com
+    - "*.lan"
+    - "*.linksys.com"
+    - "+.pool.ntp.org"
+    - "+.local"
+    - "time.*.com"
+    - "ntp.*.com"
+    - "+.market.xiaomi.com"
+    - "+.qq.com"
+    - "+.cn"
+    - "tqos.anticheatexpert.com"
+    - "cn.voice.gcloudcs.com"
 
 
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
   nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://dns.alidns.com/dns-query
+    - https://dns.alidns.com/dns-query#h3=true
     - https://doh.pub/dns-query
+
   geoip: true
   geoip-code: CN
   proxy-server-nameserver:
+    - 114.114.114.114
+    - 8.8.8.8
   nameserver-policy:
     geosite:cn: system
     geosite:gfw,geolocation-!cn:
-    - https://223.5.5.5/dns-query#h3=true
-    - https://223.6.6.6/dns-query#h3=true
+    - https://223.5.5.5/dns-query
+    - https://223.6.6.6/dns-query
 
 
 proxies:
