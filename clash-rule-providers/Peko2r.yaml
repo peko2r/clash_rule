@@ -673,27 +673,6 @@ rule-providers:
     path: 
     interval: 86400
 
-  Telegram SG:
-    type: http
-    behavior: classical
-    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/TelegramSG.yaml"
-    path: 
-    interval: 86400
-
-  Telegram EU:
-    type: http
-    behavior: classical
-    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/TelegramEU.yaml"
-    path: 
-    interval: 86400
-
-  Telegram US:
-    type: http
-    behavior: classical
-    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/peko2r/clash_rule/master/TelegramUS.yaml"
-    path: 
-    interval: 86400
-
   Telegram:
     type: http
     behavior: classical
@@ -711,10 +690,17 @@ rule-providers:
   OpenAi:
     type: http
     behavior: classical
-    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml"
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml"
     path: 
     interval: 86400
     
+  BardAi:
+    type: http
+    behavior: classical
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BardAI/BardAI.yaml"
+    path: 
+    interval: 86400
+
   AI:
     type: http
     behavior: classical
@@ -904,6 +890,7 @@ rules:
  - RULE-SET,Telegram,➤ Telegram
  - RULE-SET,Discord,💬 Discord
  - RULE-SET,OpenAi,֎ AI
+ - RULE-SET,BardAi,֎ AI
  - RULE-SET,AI,֎ AI
  - RULE-SET,Twitch,👾 Twitch
  - RULE-SET,YouTube,▶️ YouTube
