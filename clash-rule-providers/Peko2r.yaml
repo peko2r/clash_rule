@@ -38,7 +38,6 @@ sniffer:                         #【Meta专属】sniffer域名嗅探器
 
 dns:
   enable: true
-  prefer-h3: true
   listen: 127.0.0.1:8853
   ipv6: false
   enhanced-mode: fake-ip
