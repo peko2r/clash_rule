@@ -54,6 +54,18 @@ dns:
     - "+.cn"
     - "tqos.anticheatexpert.com"
     - "cn.voice.gcloudcs.com"
+    - "+.leigod.com"
+    - "turing.captcha.qcloud.com"
+    - "turing.captcha.gtimg.com"
+    - "leigod.nn.com"
+    - "o.alicdn.com"
+    - "data.nn.com"
+    - "+.secure.dyn.riotcdn.net"
+    - "+.rdt.tfogc.com"
+    - "akamai.embed.rgpub.io"
+    - "a247c.playfabapi.com"
+    - "westus.tts.speech.microsoft.com"
+    - "api.gameanalytics.com"
 
 
   nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
