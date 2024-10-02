@@ -87,7 +87,7 @@ dns:
 proxies:
   
 proxy-groups:
-  - name: 🚀 Proxy
+  - name: Proxy
     type: select
     proxies:
       - 🇭🇰 HK
@@ -104,8 +104,9 @@ proxy-groups:
       - 🇺🇸 US IEPL
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Proxy.png
 
-  - name: 🎙️Stream
+  - name: Stream
     type: select
     proxies:
       - ⛄Stream
@@ -118,8 +119,9 @@ proxy-groups:
       - 🇸🇬 SG IEPL
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
 
-  - name: ➤ Telegram
+  - name: Telegram
     type: select
     proxies:
       - 🇸🇬 SG
@@ -131,13 +133,14 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Telegram.png
 
-  - name: 🎬 Emby
+  - name: Emby
     type: select
     proxies:
       - 🫧Emby专用
       - DIRECT
-      - 🎙️Stream
+      - Stream
       - 🇯🇵 JP
       - 🇸🇬 SG
       - 🇭🇰 HK
@@ -146,11 +149,12 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Emby.png
 
-  - name: 🎮 Game
+  - name: Game
     type: select
     proxies:
-      - 🚀 Proxy
+      - Proxy
       - DIRECT
       - 🇨🇳 TW
       - 🇭🇰 HK
@@ -160,13 +164,14 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Game.png
 
-  - name: ᯤ Spotify
+  - name: Spotify
     type: select
     proxies:
       - DIRECT
       - 🇺🇸 US
-      - 🚀 Proxy
+      - Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -174,8 +179,9 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Spotify.png
 
-  - name: 🧚 Google
+  - name: Google
     type: select
     proxies:
       - 🇭🇰 HK
@@ -187,11 +193,12 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Google.png
 
-  - name: ▶️ YouTube
+  - name: YouTube
     type: select
     proxies:
-      - 🎙️Stream
+      - Stream
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -200,12 +207,12 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Youtube.png
 
   - name: 🖤 E-h
     type: select
     proxies:
-      - 🚀 Proxy
-      - 🇺🇸 US 家宽
+      - Proxy
       - 🇨🇳 TW IEPL
       - 🇭🇰 HK IEPL
       - 🇯🇵 JP IEPL
@@ -216,7 +223,7 @@ proxy-groups:
   - name: 🅽 Netflix
     type: select
     proxies:
-      - 🎙️Stream
+      - Stream
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -229,7 +236,7 @@ proxy-groups:
   - name: 👾 Twitch
     type: select
     proxies:
-      - 🎙️Stream
+      - Stream
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -242,7 +249,7 @@ proxy-groups:
   - name: 🏰 Disney
     type: select
     proxies:
-      - 🎙️Stream
+      - Stream
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -255,7 +262,7 @@ proxy-groups:
   - name: 💬 Discord
     type: select
     proxies:
-      - 🚀 Proxy
+      - Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -268,7 +275,7 @@ proxy-groups:
   - name: 🌌 Nintendo
     type: select
     proxies:
-      - 🚀 Proxy
+      - Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -281,7 +288,7 @@ proxy-groups:
   - name: 🎥 Globalmedia
     type: select
     proxies:
-      - 🎙️Stream
+      - Stream
       - 🇸🇬 SG
       - 🇭🇰 HK IEPL
       - 🇭🇰 HK
@@ -301,7 +308,7 @@ proxy-groups:
       - 🇯🇵 JP IEPL
       - 🇸🇬 SG IEPL
       - 🇺🇸 US IEPL
-      - 🚀 Proxy
+      - Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -313,7 +320,7 @@ proxy-groups:
   - name: Ⓜ️ Bing
     type: select
     proxies:
-      - 🚀 Proxy
+      - Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -326,7 +333,7 @@ proxy-groups:
   - name: Ⓜ️ Microsoft
     type: select
     proxies:
-      - 🚀 Proxy
+      - Proxy
       - 🇸🇬 SG
       - 🇭🇰 HK IEPL
       - 🇭🇰 HK
@@ -352,7 +359,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🚀 Proxy
+      - Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -368,7 +375,6 @@ proxy-groups:
       - PEKO1
       - PEKO2
       - PEKO3
-      - PEKO4
       
   - name: ♻️ select2
     type: select
@@ -376,12 +382,11 @@ proxy-groups:
       - PEKO1
       - PEKO2
       - PEKO3
-      - PEKO4
 
   - name: 📺 Bahamut
     type: select
     proxies:
-      - 🚀 Proxy
+      - Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -394,7 +399,7 @@ proxy-groups:
   - name: Ⓜ️ OneDrive
     type: select
     proxies:
-      - 🚀 Proxy
+      - Proxy
       - 🇸🇬 SG
       - 🇭🇰 HK IEPL
       - 🇭🇰 HK
@@ -408,7 +413,7 @@ proxy-groups:
   - name: 🍎 AppleTV
     type: select
     proxies:
-      - 🚀 Proxy
+      - Proxy
       - 🇨🇳 TW
       - 🇭🇰 HK
       - 🇯🇵 JP
@@ -434,7 +439,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🎙️Stream
+      - Stream
 
   - name: 🚫 AD
     type: select
@@ -447,24 +452,24 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO4
-    filter: "日本|美国"
+      - PEKO2
+    filter: ""
 
   - name: 🫧Emby专用
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO4
-    filter: "日本|美国"
+      - PEKO3
+    filter: ""
 
   - name: 🇭🇰 HK
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO2
       - PEKO3
+      - PEKO2
     filter: "香港0|Hong Kong 0|香港"
 
   - name: 🇸🇬 SG
@@ -472,7 +477,7 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO2
+      - PEKO3
     filter: "新加坡|Singapore 01|Singapore 02|Singapore 03|Singapore 04|Singapore 05|Singapore 06"
 
   - name: 🇯🇵 JP
@@ -480,8 +485,8 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO2
       - PEKO3
+      - PEKO2
     filter: "日用|日本0|日本|Japan"
 
   - name: 🇨🇳 TW
@@ -489,8 +494,8 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO3
       - PEKO2
+      - PEKO3
     filter: "台湾|Taiwan 0"
 
   - name: 🇺🇸 US
@@ -498,8 +503,8 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO3
       - PEKO2
+      - PEKO3
     filter: "美国|United States 0"
 
   - name: 🇪🇺 EU
@@ -507,8 +512,8 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO2
       - PEKO3
+      - PEKO2
     filter: "荷兰|德国"
 
   - name: 🇰🇷 KR
@@ -516,16 +521,8 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 3600
     use:
-      - PEKO3
-    filter: "韩国"
-
-  - name: 🇺🇸 US 家宽
-    type: select
-    url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
-    use:
       - PEKO2
-    filter: "🇺🇸 United States [|] 家宽 3.0x"
+    filter: "韩国"
 
   - name: 🇭🇰 HK IEPL
     type: fallback
@@ -583,19 +580,13 @@ proxy-providers:
 
   PEKO2:
     type: http
-    url: https://dadada.acaisbest.com/api/v1/client/subscribe?token=7e1c57b00e80523df239072c3d96677f
+    url: https://service-a4rgovvz-202402.lycoris.asia/api/v1/client/subscribe?token=2045755de9af1981b422cf1aa8af2130
     interval: 3600
     path:
 
   PEKO3:
     type: http
-    url: https://service-a4rgovvz-202402.lycoris.asia/api/v1/client/subscribe?token=2045755de9af1981b422cf1aa8af2130
-    interval: 3600
-    path:
-
-  PEKO4:
-    type: http
-    url: https://cdn1724328266.kunlun-c3r0j7sv-ppg.xyz/api/v1/client/subscribe?token=5f7717ae808217d75886c3bcd61c9c27
+    url: https://dadada.acaisbest.com/api/v1/client/subscribe?token=7e1c57b00e80523df239072c3d96677f
     interval: 3600
     path:
 
@@ -884,7 +875,7 @@ rule-providers:
 
 rules:
  - RULE-SET,E-h,🖤 E-h
- - RULE-SET,Myself,🚀 Proxy
+ - RULE-SET,Myself,Proxy
  - RULE-SET,UnBan,DIRECT
  - DOMAIN,clash.razord.top,DIRECT
  - DOMAIN,yacd.haishan.me,DIRECT
@@ -894,31 +885,31 @@ rules:
  - RULE-SET,LocalAreaNetwork,DIRECT
  - RULE-SET,Direct,DIRECT
  - RULE-SET,US,🇺🇸 US
- - RULE-SET,Emby,🎬 Emby
+ - RULE-SET,Emby,Emby
  - RULE-SET,AWAvenue,🚫 AD
- - RULE-SET,Game,🎮 Game
+ - RULE-SET,Game,Game
  - RULE-SET,Bing,Ⓜ️ Bing
  - RULE-SET,AppleTV,🍎 AppleTV
- - RULE-SET,Telegram,➤ Telegram
+ - RULE-SET,Telegram,Telegram
  - RULE-SET,Discord,💬 Discord
  - RULE-SET,OpenAi,֎ AI
  - RULE-SET,BardAi,֎ AI
  - RULE-SET,AI,֎ AI
  - RULE-SET,Twitch,👾 Twitch
- - RULE-SET,YouTube,▶️ YouTube
+ - RULE-SET,YouTube,YouTube
  - RULE-SET,Netflix,🅽 Netflix
  - RULE-SET,Disney,🏰 Disney
  - RULE-SET,Bahamut,📺 Bahamut
  - RULE-SET,Apple,🍎 Apple
  - RULE-SET,Microsoft,Ⓜ️ Microsoft
- - RULE-SET,Google,🧚 Google
+ - RULE-SET,Google,Google
  - RULE-SET,BilibiliHMT,📺 Bilibili
  - RULE-SET,Bilibili,📺 Bilibili
- - RULE-SET,Spotify,ᯤ Spotify
+ - RULE-SET,Spotify,Spotify
  - RULE-SET,CNmedia,🎥 CNmedia
  - RULE-SET,Globalmedia,🎥 Globalmedia
  - RULE-SET,Nintendo,🌌 Nintendo
- - RULE-SET,Proxy,🚀 Proxy
+ - RULE-SET,Proxy,Proxy
  - RULE-SET,lancidr,DIRECT
  - RULE-SET,cncidr,DIRECT
  - RULE-SET,ChinaDomain,DIRECT
@@ -926,4 +917,4 @@ rules:
  - RULE-SET,ChinaCompanyIp,DIRECT
  - GEOIP,LAN,DIRECT
  - GEOIP,CN,DIRECT
- - MATCH,🚀 Proxy
+ - MATCH,Proxy
