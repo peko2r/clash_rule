@@ -219,6 +219,7 @@ proxy-groups:
       - 🇯🇵 JP IEPL
       - 🇸🇬 SG IEPL
       - 🇺🇸 US IEPL
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
 
   - name: 🅽 Netflix
     type: select
@@ -232,6 +233,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Netflix.png
 
   - name: 👾 Twitch
     type: select
@@ -245,6 +247,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitch.png
 
   - name: 🏰 Disney
     type: select
@@ -258,6 +261,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Disney+.png
 
   - name: 💬 Discord
     type: select
@@ -271,6 +275,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
 
   - name: 🌌 Nintendo
     type: select
@@ -284,6 +289,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: 🎥 Globalmedia
     type: select
@@ -299,6 +305,7 @@ proxy-groups:
       - ♻️ select1
       - ♻️ select2
       - DIRECT
+    icon: 
 
   - name: ֎ AI
     type: select
@@ -316,6 +323,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: Ⓜ️ Bing
     type: select
@@ -329,6 +337,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: Ⓜ️ Microsoft
     type: select
@@ -343,6 +352,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: 📺 Bilibili
     type: select
@@ -354,6 +364,7 @@ proxy-groups:
       - 🇭🇰 HK IEPL
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: 🍎 Apple
     type: select
@@ -368,6 +379,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: ♻️ select1
     type: select
@@ -375,6 +387,7 @@ proxy-groups:
       - PEKO1
       - PEKO2
       - PEKO3
+    icon: 
       
   - name: ♻️ select2
     type: select
@@ -382,6 +395,7 @@ proxy-groups:
       - PEKO1
       - PEKO2
       - PEKO3
+    icon: 
 
   - name: 📺 Bahamut
     type: select
@@ -395,6 +409,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: Ⓜ️ OneDrive
     type: select
@@ -409,6 +424,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: 🍎 AppleTV
     type: select
@@ -422,6 +438,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: 🎥 CNmedia
     type: select
@@ -434,140 +451,157 @@ proxy-groups:
       - 🇯🇵 JP
       - ♻️ select1
       - ♻️ select2
+    icon: 
 
   - name: Direct
     type: select
     proxies:
       - DIRECT
       - Stream
+    icon: 
 
   - name: 🚫 AD
     type: select
     proxies:
       - REJECT
       - DIRECT
+    icon: 
 
   - name: ⛄Stream
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO2
     filter: ""
+    icon: 
 
   - name: 🫧Emby专用
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO3
     filter: ""
+    icon: 
 
   - name: 🇭🇰 HK
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO3
       - PEKO2
     filter: "香港0|Hong Kong 0|香港"
+    icon: 
 
   - name: 🇸🇬 SG
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO3
     filter: "新加坡|Singapore 01|Singapore 02|Singapore 03|Singapore 04|Singapore 05|Singapore 06"
+    icon: 
 
   - name: 🇯🇵 JP
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO3
       - PEKO2
     filter: "日用|日本0|日本|Japan"
+    icon: 
 
   - name: 🇨🇳 TW
-    type: fallback
+    type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO2
       - PEKO3
     filter: "台湾|Taiwan 0"
+    icon: 
 
   - name: 🇺🇸 US
-    type: fallback
+    type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO2
       - PEKO3
     filter: "美国|United States 0"
+    icon: 
 
   - name: 🇪🇺 EU
-    type: fallback
+    type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO3
       - PEKO2
     filter: "荷兰|德国"
+    icon: 
 
   - name: 🇰🇷 KR
-    type: fallback
+    type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     use:
       - PEKO2
     filter: "韩国"
+    icon: 
 
   - name: 🇭🇰 HK IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     lazy: true
     use:
       - PEKO1
     filter: "深港|Hong Kong 🇭🇰 IPLC|HKBN"
+    icon: 
 
   - name: 🇸🇬 SG IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     lazy: true
     use:
       - PEKO1
     filter: "Singapore 🇸🇬 IPLC"
+    icon: 
 
   - name: 🇯🇵 JP IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     lazy: true
     use:
       - PEKO1
     filter: "Japan 🇯🇵 沪日IPLC"
+    icon: 
 
   - name: 🇨🇳 TW IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     lazy: true
     use:
       - PEKO1
     filter: "Taiwan 🇹🇼 IPLC"
+    icon: 
 
   - name: 🇺🇸 US IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 3600
+    interval: 300
     lazy: true
     use:
       - PEKO1
     filter: "United States 🇺🇸 沪日IPLC|United States 🇺🇸 ATT"
+    icon: 
 
 
 
@@ -575,19 +609,19 @@ proxy-providers:
   PEKO1:
     type: http
     url: https://url.ayanami-subscribe-url.online/api/v1/client/subscribe?token=6c2116661a8ec679c109fd7e668cb3ee
-    interval: 3600
+    interval: 86400
     path:
 
   PEKO2:
     type: http
     url: https://service-a4rgovvz-202402.lycoris.asia/api/v1/client/subscribe?token=2045755de9af1981b422cf1aa8af2130
-    interval: 3600
+    interval: 86400
     path:
 
   PEKO3:
     type: http
     url: https://dadada.acaisbest.com/api/v1/client/subscribe?token=7e1c57b00e80523df239072c3d96677f
-    interval: 3600
+    interval: 86400
     path:
 
 
