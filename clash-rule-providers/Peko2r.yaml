@@ -570,7 +570,7 @@ proxy-groups:
     lazy: true
     use:
       - PEKO1
-    filter: "Singapore IPLC"
+    filter: "Singapore 🇸🇬 IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/SG.png
 
   - name: JP IEPL
@@ -580,7 +580,7 @@ proxy-groups:
     lazy: true
     use:
       - PEKO1
-    filter: "Japan 沪日IPLC"
+    filter: "Japan 🇯🇵 沪日IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/JP.png
 
   - name: TW IEPL
@@ -600,7 +600,7 @@ proxy-groups:
     lazy: true
     use:
       - PEKO1
-    filter: "United States 沪日IPLC|United States ATT"
+    filter: "United States 🇺🇸 沪日IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/US.png
 
 
