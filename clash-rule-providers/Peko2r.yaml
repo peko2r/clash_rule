@@ -620,7 +620,7 @@ proxy-providers:
 
   PEKO3:
     type: http
-    url: https://dadada.acaisbest.com/api/v1/client/subscribe?token=7e1c57b00e80523df239072c3d96677f
+    url: https://dadada.acaisbest.com/api/v1/client/subscribe?token=7b84d841326d3b26e478fa299fb4610b
     interval: 86400
     path:
 
