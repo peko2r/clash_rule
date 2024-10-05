@@ -212,13 +212,13 @@ proxy-groups:
   - name: E-h
     type: select
     proxies:
-      - DIRECT
       - Proxy
       - TW IEPL
       - HK IEPL
       - JP IEPL
       - SG IEPL
       - US IEPL
+      - DIRECT
     icon: https://raw.githubusercontent.com/peko2r/clash_rule/master/icon/E-Hentai.png
 
   - name: Netflix
