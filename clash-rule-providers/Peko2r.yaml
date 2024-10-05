@@ -90,65 +90,65 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇨🇳 TW
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇪🇺 EU
-      - 🇰🇷 KR
-      - 🇸🇬 SG IEPL
-      - 🇯🇵 JP IEPL
-      - 🇨🇳 TW IEPL
-      - 🇭🇰 HK IEPL
-      - 🇺🇸 US IEPL
-      - ♻️ select1
-      - ♻️ select2
+      - HK
+      - JP
+      - TW
+      - SG
+      - US
+      - EU
+      - KR
+      - SG IEPL
+      - JP IEPL
+      - TW IEPL
+      - HK IEPL
+      - US IEPL
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Proxy.png
 
   - name: Stream
     type: select
     proxies:
-      - ⛄Stream
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇨🇳 TW
-      - 🇺🇸 US
-      - 🇪🇺 EU
-      - 🇰🇷 KR
-      - 🇸🇬 SG IEPL
-      - ♻️ select1
-      - ♻️ select2
+      - Stream专用
+      - HK
+      - JP
+      - TW
+      - US
+      - EU
+      - KR
+      - SG IEPL
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
 
   - name: Telegram
     type: select
     proxies:
-      - 🇸🇬 SG
-      - 🇸🇬 SG IEPL
-      - 🇭🇰 HK
-      - 🇨🇳 TW
-      - 🇯🇵 JP
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - SG
+      - SG IEPL
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Telegram.png
 
   - name: Emby
     type: select
     proxies:
-      - 🫧Emby专用
+      - Emby专用
       - DIRECT
       - Stream
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇭🇰 HK
-      - 🇨🇳 TW
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - JP
+      - SG
+      - HK
+      - TW
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Emby.png
 
   - name: Game
@@ -156,336 +156,336 @@ proxy-groups:
     proxies:
       - Proxy
       - DIRECT
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Game.png
 
   - name: Spotify
     type: select
     proxies:
       - DIRECT
-      - 🇺🇸 US
+      - US
       - Proxy
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - TW
+      - HK
+      - JP
+      - SG
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Spotify.png
 
   - name: Google
     type: select
     proxies:
-      - 🇭🇰 HK
-      - 🇺🇸 US IEPL
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇨🇳 TW
-      - 🇯🇵 JP
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - HK
+      - US IEPL
+      - SG
+      - US
+      - TW
+      - JP
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Google.png
 
   - name: YouTube
     type: select
     proxies:
       - Stream
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Youtube.png
 
-  - name: 🖤 E-h
+  - name: E-h
     type: select
     proxies:
       - DIRECT
       - Proxy
-      - 🇨🇳 TW IEPL
-      - 🇭🇰 HK IEPL
-      - 🇯🇵 JP IEPL
-      - 🇸🇬 SG IEPL
-      - 🇺🇸 US IEPL
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Heart.png
+      - TW IEPL
+      - HK IEPL
+      - JP IEPL
+      - SG IEPL
+      - US IEPL
+    icon: https://raw.githubusercontent.com/peko2r/clash_rule/master/icon/E-Hentai.png
 
-  - name: 🅽 Netflix
+  - name: Netflix
     type: select
     proxies:
       - Stream
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Netflix.png
 
-  - name: 👾 Twitch
+  - name: Twitch
     type: select
     proxies:
       - Stream
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitch.png
 
-  - name: 🏰 Disney
+  - name: Disney
     type: select
     proxies:
       - Stream
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Disney+.png
 
-  - name: 💬 Discord
+  - name: Discord
     type: select
     proxies:
       - Proxy
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
 
-  - name: 🌌 Nintendo
+  - name: Nintendo
     type: select
     proxies:
       - Proxy
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
     icon: https://raw.githubusercontent.com/peko2r/clash_rule/master/icon/Nintendo.png
 
-  - name: 🎥 Globalmedia
+  - name: Globalmedia
     type: select
     proxies:
       - Stream
-      - 🇸🇬 SG
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK
-      - 🇨🇳 TW
-      - 🇯🇵 JP
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
+      - SG
+      - HK IEPL
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - select1
+      - select2
       - DIRECT
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/GMedia.png
 
-  - name: ֎ AI
+  - name: AI
     type: select
     proxies:
-      - 🇺🇸 US
-      - 🇭🇰 HK IEPL
-      - 🇯🇵 JP IEPL
-      - 🇸🇬 SG IEPL
-      - 🇺🇸 US IEPL
+      - US
+      - HK IEPL
+      - JP IEPL
+      - SG IEPL
+      - US IEPL
       - Proxy
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
+      - TW
+      - HK
+      - JP
+      - SG
+      - KR
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/OpenAI.png
 
-  - name: Ⓜ️ Bing
-    type: select
-    proxies:
-      - Proxy
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
-
-  - name: Ⓜ️ Microsoft
+  - name: Bing
     type: select
     proxies:
       - Proxy
-      - 🇸🇬 SG
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK
-      - 🇨🇳 TW
-      - 🇯🇵 JP
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Microsoft.png
 
-  - name: 📺 Bilibili
+  - name: Microsoft
     type: select
     proxies:
-      - DIRECT
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇨🇳 TW IEPL
-      - 🇭🇰 HK IEPL
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
+      - Proxy
+      - SG
+      - HK IEPL
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Microsoft.png
 
-  - name: 🍎 Apple
+  - name: Bilibili
     type: select
     proxies:
       - DIRECT
-      - Proxy
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
+      - TW
+      - HK
+      - TW IEPL
+      - HK IEPL
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Bilibili.png
 
-  - name: ♻️ select1
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Apple.png
+
+  - name: select1
     type: select
     use:
       - PEKO1
       - PEKO2
       - PEKO3
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Auto.png
       
-  - name: ♻️ select2
+  - name: select2
     type: select
     use:
       - PEKO1
       - PEKO2
       - PEKO3
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Auto.png
 
-  - name: 📺 Bahamut
+  - name: Bahamut
     type: select
     proxies:
       - Proxy
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
 
-  - name: Ⓜ️ OneDrive
+  - name: OneDrive
     type: select
     proxies:
       - Proxy
-      - 🇸🇬 SG
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK
-      - 🇨🇳 TW
-      - 🇯🇵 JP
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
+      - SG
+      - HK IEPL
+      - HK
+      - TW
+      - JP
+      - US
+      - KR
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Microsoft.png
 
-  - name: 🍎 AppleTV
+  - name: AppleTV
     type: select
     proxies:
       - Proxy
-      - 🇨🇳 TW
-      - 🇭🇰 HK
-      - 🇯🇵 JP
-      - 🇸🇬 SG
-      - 🇺🇸 US
-      - 🇰🇷 KR
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
+      - TW
+      - HK
+      - JP
+      - SG
+      - US
+      - KR
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Apple.png
 
-  - name: 🎥 CNmedia
+  - name: CNmedia
     type: select
     proxies:
       - DIRECT
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK
-      - 🇨🇳 TW
-      - 🇸🇬 SG
-      - 🇯🇵 JP
-      - ♻️ select1
-      - ♻️ select2
-    icon: 
+      - HK IEPL
+      - HK
+      - TW
+      - SG
+      - JP
+      - select1
+      - select2
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/CMedia.png
 
   - name: Direct
     type: select
     proxies:
       - DIRECT
       - Stream
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Direct.png
 
-  - name: 🚫 AD
+  - name: AD
     type: select
     proxies:
       - REJECT
       - DIRECT
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/AdBlock.png
 
-  - name: ⛄Stream
+  - name: Stream专用
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     use:
       - PEKO2
     filter: ""
-    icon: 
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
 
-  - name: 🫧Emby专用
+  - name: Emby专用
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     use:
       - PEKO3
     filter: ""
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Emby.png
 
-  - name: 🇭🇰 HK
+  - name: HK
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -493,18 +493,18 @@ proxy-groups:
       - PEKO3
       - PEKO2
     filter: "香港0|Hong Kong 0|香港"
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/HK02.png
 
-  - name: 🇸🇬 SG
+  - name: SG
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     use:
       - PEKO3
     filter: "新加坡|Singapore 01|Singapore 02|Singapore 03|Singapore 04|Singapore 05|Singapore 06"
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/SG.png
 
-  - name: 🇯🇵 JP
+  - name: JP
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -512,9 +512,9 @@ proxy-groups:
       - PEKO3
       - PEKO2
     filter: "日用|日本0|日本|Japan"
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/JP.png
 
-  - name: 🇨🇳 TW
+  - name: TW
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -522,9 +522,9 @@ proxy-groups:
       - PEKO2
       - PEKO3
     filter: "台湾|Taiwan 0"
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/TW.png
 
-  - name: 🇺🇸 US
+  - name: US
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -532,9 +532,9 @@ proxy-groups:
       - PEKO2
       - PEKO3
     filter: "美国|United States 0"
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/US.png
 
-  - name: 🇪🇺 EU
+  - name: EU
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -542,48 +542,48 @@ proxy-groups:
       - PEKO3
       - PEKO2
     filter: "荷兰|德国"
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/DE.png
 
-  - name: 🇰🇷 KR
+  - name: KR
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     use:
       - PEKO2
     filter: "韩国"
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/KR.png
 
-  - name: 🇭🇰 HK IEPL
+  - name: HK IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     lazy: true
     use:
       - PEKO1
-    filter: "深港|Hong Kong 🇭🇰 IPLC|HKBN"
-    icon: 
+    filter: "深港|Hong Kong IPLC|HKBN"
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/HK02.png
 
-  - name: 🇸🇬 SG IEPL
+  - name: SG IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     lazy: true
     use:
       - PEKO1
-    filter: "Singapore 🇸🇬 IPLC"
-    icon: 
+    filter: "Singapore IPLC"
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/SG.png
 
-  - name: 🇯🇵 JP IEPL
+  - name: JP IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     lazy: true
     use:
       - PEKO1
-    filter: "Japan 🇯🇵 沪日IPLC"
-    icon: 
+    filter: "Japan 沪日IPLC"
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/JP.png
 
-  - name: 🇨🇳 TW IEPL
+  - name: TW IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -591,17 +591,17 @@ proxy-groups:
     use:
       - PEKO1
     filter: "Taiwan 🇹🇼 IPLC"
-    icon: 
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/TW.png
 
-  - name: 🇺🇸 US IEPL
+  - name: US IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     lazy: true
     use:
       - PEKO1
-    filter: "United States 🇺🇸 沪日IPLC|United States 🇺🇸 ATT"
-    icon: 
+    filter: "United States 沪日IPLC|United States ATT"
+    icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/US.png
 
 
 
@@ -908,7 +908,7 @@ rule-providers:
 
 
 rules:
- - RULE-SET,E-h,🖤 E-h
+ - RULE-SET,E-h,E-h
  - RULE-SET,Myself,Proxy
  - RULE-SET,UnBan,DIRECT
  - DOMAIN,clash.razord.top,DIRECT
@@ -918,31 +918,31 @@ rules:
  - RULE-SET,GameDownloadCN,DIRECT
  - RULE-SET,LocalAreaNetwork,DIRECT
  - RULE-SET,Direct,DIRECT
- - RULE-SET,US,🇺🇸 US
+ - RULE-SET,US,US
  - RULE-SET,Emby,Emby
- - RULE-SET,AWAvenue,🚫 AD
+ - RULE-SET,AWAvenue,AD
  - RULE-SET,Game,Game
- - RULE-SET,Bing,Ⓜ️ Bing
- - RULE-SET,AppleTV,🍎 AppleTV
+ - RULE-SET,Bing,Bing
+ - RULE-SET,AppleTV,AppleTV
  - RULE-SET,Telegram,Telegram
- - RULE-SET,Discord,💬 Discord
- - RULE-SET,OpenAi,֎ AI
- - RULE-SET,BardAi,֎ AI
- - RULE-SET,AI,֎ AI
- - RULE-SET,Twitch,👾 Twitch
+ - RULE-SET,Discord,Discord
+ - RULE-SET,OpenAi,AI
+ - RULE-SET,BardAi,AI
+ - RULE-SET,AI,AI
+ - RULE-SET,Twitch,Twitch
  - RULE-SET,YouTube,YouTube
- - RULE-SET,Netflix,🅽 Netflix
- - RULE-SET,Disney,🏰 Disney
- - RULE-SET,Bahamut,📺 Bahamut
- - RULE-SET,Apple,🍎 Apple
- - RULE-SET,Microsoft,Ⓜ️ Microsoft
+ - RULE-SET,Netflix,Netflix
+ - RULE-SET,Disney,Disney
+ - RULE-SET,Bahamut,Bahamut
+ - RULE-SET,Apple,Apple
+ - RULE-SET,Microsoft,Microsoft
  - RULE-SET,Google,Google
- - RULE-SET,BilibiliHMT,📺 Bilibili
- - RULE-SET,Bilibili,📺 Bilibili
+ - RULE-SET,BilibiliHMT,Bilibili
+ - RULE-SET,Bilibili,Bilibili
  - RULE-SET,Spotify,Spotify
- - RULE-SET,CNmedia,🎥 CNmedia
- - RULE-SET,Globalmedia,🎥 Globalmedia
- - RULE-SET,Nintendo,🌌 Nintendo
+ - RULE-SET,CNmedia,CNmedia
+ - RULE-SET,Globalmedia,Globalmedia
+ - RULE-SET,Nintendo,Nintendo
  - RULE-SET,Proxy,Proxy
  - RULE-SET,lancidr,DIRECT
  - RULE-SET,cncidr,DIRECT
