@@ -289,7 +289,7 @@ proxy-groups:
       - 🇰🇷 KR
       - ♻️ select1
       - ♻️ select2
-    icon: 
+    icon: https://raw.githubusercontent.com/peko2r/clash_rule/master/icon/Nintendo.png
 
   - name: 🎥 Globalmedia
     type: select
