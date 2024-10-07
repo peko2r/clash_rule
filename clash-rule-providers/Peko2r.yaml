@@ -278,6 +278,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
+    hidden: true
 
   - name: Nintendo
     type: select
@@ -309,6 +310,7 @@ proxy-groups:
       - select2
       - DIRECT
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/GMedia.png
+    hidden: true
 
   - name: AI
     type: select
@@ -341,6 +343,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Microsoft.png
+    hidden: true
 
   - name: Microsoft
     type: select
@@ -356,6 +359,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Microsoft.png
+    hidden: true
 
   - name: Bilibili
     type: select
@@ -476,7 +480,6 @@ proxy-groups:
     use:
       - PEKO1
     filter: ""
-    exclude-filter: "剩余流量|套餐到期"
     icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Sese.png
     
   - name: 次元雲
@@ -497,7 +500,6 @@ proxy-groups:
     use:
       - PEKO3
     filter: ""
-    exclude-filter: "剩余流量|套餐到期"
     icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/ACA.png
     
   - name: XQC
@@ -508,7 +510,6 @@ proxy-groups:
     use:
       - PEKO4
     filter: ""
-    exclude-filter: "剩余流量|套餐到期"
     icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/ACA.png
 
   - name: Stream专用
@@ -541,6 +542,7 @@ proxy-groups:
       - PEKO2
     filter: "香港0|Hong Kong 0|香港"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/HK02.png
+    hidden: true
 
   - name: SG
     type: url-test
@@ -562,6 +564,7 @@ proxy-groups:
       - PEKO2
     filter: "日用|日本0|日本|Japan"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/JP.png
+    hidden: true
 
   - name: TW
     type: url-test
@@ -595,6 +598,7 @@ proxy-groups:
       - PEKO2
     filter: "荷兰|德国"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/DE.png
+    hidden: true
 
   - name: KR
     type: url-test
@@ -605,6 +609,7 @@ proxy-groups:
       - PEKO2
     filter: "韩国"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/KR.png
+    hidden: true
 
   - name: HK IEPL
     type: fallback
@@ -675,6 +680,7 @@ proxy-providers:
     override:
       additional-suffix: " ❀𝒜𝓎𝒶𝓃𝒶𝓂𝒾❀"
     interval: 86400
+    exclude-filter: "剩余流量|套餐到期"
     path:
 
   PEKO2:
@@ -683,6 +689,7 @@ proxy-providers:
     override: 
       additional-suffix: " ❁次元雲❁"
     interval: 86400
+    exclude-filter: "剩余流量|套餐到期"
     path:
 
   PEKO3:
@@ -691,6 +698,7 @@ proxy-providers:
     override:
       additional-suffix: " ❀𝒜𝒞𝒜-𝒻𝒶𝓂𝒾𝓁𝓎❀"
     interval: 86400
+    exclude-filter: "剩余流量|套餐到期"
     path:
 
   PEKO4:
@@ -699,6 +707,7 @@ proxy-providers:
     override:
       additional-suffix: " ✤XQC✤"
     interval: 86400
+    exclude-filter: "剩余流量|套餐到期"
     path:
 
 rule-providers:
