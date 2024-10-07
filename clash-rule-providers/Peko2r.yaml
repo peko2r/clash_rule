@@ -234,6 +234,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Netflix.png
+    hidden: true
 
   - name: Twitch
     type: select
@@ -262,6 +263,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Disney+.png
+    hidden: true
 
   - name: Discord
     type: select
@@ -290,6 +292,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/peko2r/clash_rule/master/icon/Nintendo.png
+    hidden: true
 
   - name: Globalmedia
     type: select
@@ -365,6 +368,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Bilibili.png
+    hidden: true
 
   - name: Apple
     type: select
@@ -383,18 +387,12 @@ proxy-groups:
 
   - name: select1
     type: select
-    use:
-      - PEKO1
-      - PEKO2
-      - PEKO3
+    include-all: true
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Auto.png
       
   - name: select2
     type: select
-    use:
-      - PEKO1
-      - PEKO2
-      - PEKO3
+    include-all: true
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Auto.png
 
   - name: Bahamut
@@ -425,6 +423,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Microsoft.png
+    hidden: true
 
   - name: AppleTV
     type: select
@@ -439,6 +438,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Apple.png
+    hidden: true
 
   - name: CNmedia
     type: select
@@ -452,6 +452,7 @@ proxy-groups:
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/CMedia.png
+    hidden: true
 
   - name: Direct
     type: select
@@ -467,10 +468,54 @@ proxy-groups:
       - DIRECT
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/AdBlock.png
 
+  - name: Ayanami
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 100
+    use:
+      - PEKO1
+    filter: ""
+    exclude-filter: "剩余流量|套餐到期"
+    icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Sese.png
+    
+  - name: 次元雲
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 100
+    use:
+      - PEKO2
+    filter: ""
+    icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/Ciyuanyun.png
+
+  - name: ACA-family
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 100
+    use:
+      - PEKO3
+    filter: ""
+    exclude-filter: "剩余流量|套餐到期"
+    icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/ACA.png
+    
+  - name: XQC
+    type: url-test
+    url: "http://connectivitycheck.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 100
+    use:
+      - PEKO4
+    filter: ""
+    exclude-filter: "剩余流量|套餐到期"
+    icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/ACA.png
+
   - name: Stream专用
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
       - PEKO2
     filter: ""
@@ -480,8 +525,9 @@ proxy-groups:
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
-      - PEKO3
+      - PEKO4
     filter: ""
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Emby.png
 
@@ -489,6 +535,7 @@ proxy-groups:
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
       - PEKO3
       - PEKO2
@@ -499,6 +546,7 @@ proxy-groups:
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
       - PEKO3
     filter: "新加坡|Singapore 01|Singapore 02|Singapore 03|Singapore 04|Singapore 05|Singapore 06"
@@ -508,6 +556,7 @@ proxy-groups:
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
       - PEKO3
       - PEKO2
@@ -518,6 +567,7 @@ proxy-groups:
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
       - PEKO2
       - PEKO3
@@ -528,6 +578,7 @@ proxy-groups:
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
       - PEKO2
       - PEKO3
@@ -538,6 +589,7 @@ proxy-groups:
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
       - PEKO3
       - PEKO2
@@ -548,6 +600,7 @@ proxy-groups:
     type: url-test
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     use:
       - PEKO2
     filter: "韩国"
@@ -557,51 +610,61 @@ proxy-groups:
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     lazy: true
     use:
       - PEKO1
     filter: "深港|Hong Kong IPLC|HKBN"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/HK02.png
+    hidden: true
 
   - name: SG IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     lazy: true
     use:
       - PEKO1
     filter: "Singapore 🇸🇬 IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/SG.png
+    hidden: true
 
   - name: JP IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     lazy: true
     use:
       - PEKO1
     filter: "Japan 🇯🇵 沪日IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/JP.png
+    hidden: true
 
   - name: TW IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     lazy: true
     use:
       - PEKO1
     filter: "Taiwan 🇹🇼 IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/TW.png
+    hidden: true
 
   - name: US IEPL
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
+    tolerance: 100
     lazy: true
     use:
       - PEKO1
     filter: "United States 🇺🇸 沪日IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/US.png
+    hidden: true
 
 
 
@@ -609,21 +672,34 @@ proxy-providers:
   PEKO1:
     type: http
     url: https://url.ayanami-subscribe-url.online/api/v1/client/subscribe?token=6c2116661a8ec679c109fd7e668cb3ee
+    override:
+      additional-suffix: " ❀𝒜𝓎𝒶𝓃𝒶𝓂𝒾❀"
     interval: 86400
     path:
 
   PEKO2:
     type: http
     url: https://service-a4rgovvz-202402.lycoris.asia/api/v1/client/subscribe?token=2045755de9af1981b422cf1aa8af2130
+    override: 
+      additional-suffix: " ❁次元雲❁"
     interval: 86400
     path:
 
   PEKO3:
     type: http
     url: https://dadada.acaisbest.com/api/v1/client/subscribe?token=7b84d841326d3b26e478fa299fb4610b
+    override:
+      additional-suffix: " ❀𝒜𝒞𝒜-𝒻𝒶𝓂𝒾𝓁𝓎❀"
     interval: 86400
     path:
 
+  PEKO4:
+    type: http
+    url: https://apii.xqc.best/api/v1/client/subscribe?token=dcd80021d4fdbfe33665d5f4aeec843e
+    override:
+      additional-suffix: " ✤XQC✤"
+    interval: 86400
+    path:
 
 rule-providers:
   Myself:
