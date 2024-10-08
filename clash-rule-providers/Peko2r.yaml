@@ -501,16 +501,6 @@ proxy-groups:
       - PEKO3
     filter: ""
     icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/ACA.png
-    
-  - name: XQC
-    type: url-test
-    url: "http://connectivitycheck.gstatic.com/generate_204"
-    interval: 300
-    tolerance: 100
-    use:
-      - PEKO4
-    filter: ""
-    icon: https://raw.githubusercontent.com/black2c7/TheMagic-Icons/main/Icons/ACA.png
 
   - name: Stream专用
     type: url-test
@@ -528,7 +518,7 @@ proxy-groups:
     interval: 300
     tolerance: 100
     use:
-      - PEKO4
+      - PEKO3
     filter: ""
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Emby.png
 
@@ -701,14 +691,6 @@ proxy-providers:
     exclude-filter: "剩余流量|套餐到期"
     path:
 
-  PEKO4:
-    type: http
-    url: https://apii.xqc.best/api/v1/client/subscribe?token=dcd80021d4fdbfe33665d5f4aeec843e
-    override:
-      additional-suffix: " ✤XQC✤"
-    interval: 86400
-    exclude-filter: "剩余流量|套餐到期"
-    path:
 
 rule-providers:
   Myself:
