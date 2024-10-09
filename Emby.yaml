@@ -3,8 +3,12 @@ payload:
   - PROCESS-NAME,electron.exe
 #冰镇西瓜
   - DOMAIN,emby.1024.name
+  - DOMAIN,emby2.1024.name
+  - DOMAIN,emby3.1024.name
+  - DOMAIN,emby4.1024.name
 #Plumber
   - DOMAIN,tiancheng.boaz.cf
+  - DOMAIN,emby.boaz.cf
 #misty
   - DOMAIN,misty.cx
 #卡戎
