@@ -97,11 +97,11 @@ proxy-groups:
       - US
       - EU
       - KR
-      - SG IEPL
-      - JP IEPL
-      - TW IEPL
-      - HK IEPL
-      - US IEPL
+      - SG IPLC
+      - JP IPLC
+      - TW IPLC
+      - HK IPLC
+      - US IPLC
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Proxy.png
@@ -116,7 +116,7 @@ proxy-groups:
       - US
       - EU
       - KR
-      - SG IEPL
+      - SG IPLC
       - select1
       - select2
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
@@ -125,7 +125,7 @@ proxy-groups:
     type: select
     proxies:
       - SG
-      - SG IEPL
+      - SG IPLC
       - HK
       - TW
       - JP
@@ -185,7 +185,7 @@ proxy-groups:
     type: select
     proxies:
       - HK
-      - US IEPL
+      - US IPLC
       - SG
       - US
       - TW
@@ -213,11 +213,11 @@ proxy-groups:
     type: select
     proxies:
       - Proxy
-      - TW IEPL
-      - HK IEPL
-      - JP IEPL
-      - SG IEPL
-      - US IEPL
+      - TW IPLC
+      - HK IPLC
+      - JP IPLC
+      - SG IPLC
+      - US IPLC
       - DIRECT
     icon: https://raw.githubusercontent.com/peko2r/clash_rule/master/icon/E-Hentai.png
 
@@ -300,7 +300,7 @@ proxy-groups:
     proxies:
       - Stream
       - SG
-      - HK IEPL
+      - HK IPLC
       - HK
       - TW
       - JP
@@ -316,10 +316,10 @@ proxy-groups:
     type: select
     proxies:
       - US
-      - HK IEPL
-      - JP IEPL
-      - SG IEPL
-      - US IEPL
+      - HK IPLC
+      - JP IPLC
+      - SG IPLC
+      - US IPLC
       - Proxy
       - TW
       - HK
@@ -350,7 +350,7 @@ proxy-groups:
     proxies:
       - Proxy
       - SG
-      - HK IEPL
+      - HK IPLC
       - HK
       - TW
       - JP
@@ -367,8 +367,8 @@ proxy-groups:
       - DIRECT
       - TW
       - HK
-      - TW IEPL
-      - HK IEPL
+      - TW IPLC
+      - HK IPLC
       - select1
       - select2
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Bilibili.png
@@ -418,7 +418,7 @@ proxy-groups:
     proxies:
       - Proxy
       - SG
-      - HK IEPL
+      - HK IPLC
       - HK
       - TW
       - JP
@@ -448,7 +448,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - HK IEPL
+      - HK IPLC
       - HK
       - TW
       - SG
@@ -477,6 +477,7 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     tolerance: 100
+    lazy: true
     use:
       - PEKO1
     filter: ""
@@ -487,6 +488,7 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     tolerance: 100
+    lazy: true
     use:
       - PEKO2
     filter: ""
@@ -497,6 +499,7 @@ proxy-groups:
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
     tolerance: 100
+    lazy: true
     use:
       - PEKO3
     filter: ""
@@ -530,9 +533,8 @@ proxy-groups:
     use:
       - PEKO3
       - PEKO2
-    filter: "香港0|Hong Kong 0|香港"
+    filter: "香港|Hong Kong"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/HK02.png
-    hidden: true
 
   - name: SG
     type: url-test
@@ -540,8 +542,9 @@ proxy-groups:
     interval: 300
     tolerance: 100
     use:
+      - PEKO2
       - PEKO3
-    filter: "新加坡|Singapore 01|Singapore 02|Singapore 03|Singapore 04|Singapore 05|Singapore 06"
+    filter: "新加坡|Singapore"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/SG.png
 
   - name: JP
@@ -552,7 +555,7 @@ proxy-groups:
     use:
       - PEKO3
       - PEKO2
-    filter: "日用|日本0|日本|Japan"
+    filter: "日本|Japan"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/JP.png
     hidden: true
 
@@ -564,7 +567,7 @@ proxy-groups:
     use:
       - PEKO2
       - PEKO3
-    filter: "台湾|Taiwan 0"
+    filter: "台湾|Taiwan"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/TW.png
 
   - name: US
@@ -575,7 +578,7 @@ proxy-groups:
     use:
       - PEKO2
       - PEKO3
-    filter: "美国|United States 0"
+    filter: "美国|United States"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/US.png
 
   - name: EU
@@ -601,7 +604,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/KR.png
     hidden: true
 
-  - name: HK IEPL
+  - name: HK IPLC
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -609,11 +612,11 @@ proxy-groups:
     lazy: true
     use:
       - PEKO1
-    filter: "深港|Hong Kong IPLC|HKBN"
+    filter: "深港|Hong Kong  IPLC|HKBN"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/HK02.png
     hidden: true
 
-  - name: SG IEPL
+  - name: SG IPLC
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -621,11 +624,11 @@ proxy-groups:
     lazy: true
     use:
       - PEKO1
-    filter: "Singapore 🇸🇬 IPLC"
+    filter: "Singapore  IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/SG.png
     hidden: true
 
-  - name: JP IEPL
+  - name: JP IPLC
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -633,11 +636,11 @@ proxy-groups:
     lazy: true
     use:
       - PEKO1
-    filter: "Japan 🇯🇵 沪日IPLC"
+    filter: "Japan  沪日IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/JP.png
     hidden: true
 
-  - name: TW IEPL
+  - name: TW IPLC
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -645,11 +648,11 @@ proxy-groups:
     lazy: true
     use:
       - PEKO1
-    filter: "Taiwan 🇹🇼 IPLC"
+    filter: "Taiwan  IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/TW.png
     hidden: true
 
-  - name: US IEPL
+  - name: US IPLC
     type: fallback
     url: "http://connectivitycheck.gstatic.com/generate_204"
     interval: 300
@@ -657,7 +660,7 @@ proxy-groups:
     lazy: true
     use:
       - PEKO1
-    filter: "United States 🇺🇸 沪日IPLC"
+    filter: "United States  沪日IPLC"
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Country/US.png
     hidden: true
 
@@ -666,29 +669,20 @@ proxy-groups:
 proxy-providers:
   PEKO1:
     type: http
-    url: https://url.ayanami-subscribe-url.online/api/v1/client/subscribe?token=6c2116661a8ec679c109fd7e668cb3ee
-    override:
-      additional-suffix: " ❀𝒜𝓎𝒶𝓃𝒶𝓂𝒾❀"
+    url: https://gist.githubusercontent.com/peko2r/e4cd4363d3d7e7e17c26ccb9d70d69a4/raw/a2f0b3a4e8dbf5f72ce83f48c03260497a659513/Ayanami
     interval: 86400
-    exclude-filter: "剩余流量|套餐到期"
     path:
 
   PEKO2:
     type: http
-    url: https://service-a4rgovvz-202402.lycoris.asia/api/v1/client/subscribe?token=2045755de9af1981b422cf1aa8af2130
-    override: 
-      additional-suffix: " ❁次元雲❁"
+    url: https://gist.githubusercontent.com/peko2r/e4cd4363d3d7e7e17c26ccb9d70d69a4/raw/9b4fb0eb66690198b045a312471851c52a73b787/ciyuanyun
     interval: 86400
-    exclude-filter: "剩余流量|套餐到期"
     path:
 
   PEKO3:
     type: http
-    url: https://dadada.acaisbest.com/api/v1/client/subscribe?token=7b84d841326d3b26e478fa299fb4610b
-    override:
-      additional-suffix: " ❀𝒜𝒞𝒜-𝒻𝒶𝓂𝒾𝓁𝓎❀"
+    url: https://gist.githubusercontent.com/peko2r/e4cd4363d3d7e7e17c26ccb9d70d69a4/raw/9b4fb0eb66690198b045a312471851c52a73b787/ACA
     interval: 86400
-    exclude-filter: "剩余流量|套餐到期"
     path:
 
 
