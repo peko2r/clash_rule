@@ -392,11 +392,13 @@ proxy-groups:
   - name: select1
     type: select
     include-all: true
+    lazy: true
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Auto.png
       
   - name: select2
     type: select
     include-all: true
+    lazy: true
     icon: https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Auto.png
 
   - name: Bahamut
